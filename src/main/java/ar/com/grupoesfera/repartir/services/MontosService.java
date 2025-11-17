@@ -20,11 +20,6 @@ public class MontosService {
 
         BigDecimal total = grupo.getTotal();
         total = total.add(gasto.getMonto());
-
-        if (total.compareTo(BigDecimal.valueOf(0,2)) < 0) {
-            throw new TotalNegativoException();
-        }
-
         grupo.setTotal(total);
     }
 
