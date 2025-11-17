@@ -67,7 +67,7 @@ public class Grupo {
     public void setTotal(BigDecimal total) {
 
         if (total.compareTo(BigDecimal.valueOf(0,2)) < 0) {
-            throw new TotalNegativoException();
+            throw new TotalNegativoException("El total no debe ser negativo");
         }
 
         this.total = total;
