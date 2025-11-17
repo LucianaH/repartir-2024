@@ -52,7 +52,8 @@ public class TotalNoEsNegativoSteps extends FastCucumberSteps {
     }
 
     @Y("el total resultante es igual a {int}")
-    public void elTotalResultanteEsIgualA(int total) {
+    public void elTotalResultanteEsIgualA(int intTotal) {
+        BigDecimal total = new BigDecimal(intTotal);
         assertThat(grupo.getTotal()).isEqualTo(total);
     }
 
